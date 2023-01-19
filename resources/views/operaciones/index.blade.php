@@ -17,7 +17,7 @@
 			@else
 				<div class="alert alert-danger">
 					NO GUARDO LA FINALIZACION DEL FLETE!!!!
-					
+				
 				</div>
 			@endif
 		@endif
