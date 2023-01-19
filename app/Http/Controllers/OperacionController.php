@@ -53,8 +53,7 @@ class OperacionController extends Controller
         $clientes=Cliente::orderBy('nombre','ASC')->get();
         return view('operaciones.create')
             ->with('transportes',$transportes)
-            ->with('clientes',$clientes
-        )
+            ->with('clientes',$clientes)
             ->with('proveedores',$proveedores);
     }
     public function store(Request $request)
@@ -535,8 +534,10 @@ class OperacionController extends Controller
     }
 
 
-
-
+public function detalles($id)
+    { 
+        dd($id);
+    }
 
 
 }

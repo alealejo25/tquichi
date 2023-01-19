@@ -36,6 +36,12 @@ class PermissionsTableSeeder extends Seeder
         'email'     => 'quichi@transporte.com',
         'password'  => bcrypt('12345678'),
     ]);
+	DB::table('users')->insert([
+        'name'  => 'Pablo',
+        'Tipo'  => 'Admin',
+        'email'     => 'pablo@transporte.com',
+        'password'  => bcrypt('12345678'),
+    ]);
  	DB::table('users')->insert([
         'name'  => 'Alejandro Gianuzzi',
         'Tipo'  => 'Admin',
@@ -436,9 +442,11 @@ class PermissionsTableSeeder extends Seeder
 
 		$user=User::find(1);//quichi
 		$user->assignRole('Admin');
-		$user=User::find(2);//Ale
+		$user=User::find(2);//pablo
 		$user->assignRole('Admin');
-		$user=User::find(3);//CONSULTA
+		$user=User::find(3);//Ale
+		$user->assignRole('Admin');
+		$user=User::find(4);//CONSULTA
 		$user->assignRole('Consulta');
 	}
 }
