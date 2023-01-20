@@ -58,8 +58,6 @@ class OperacionController extends Controller
     }
     public function store(Request $request)
      {
-
-
         $date = new \DateTime();
         /*VALIDACION -----------------------------------------*/
         $campos=[
@@ -536,7 +534,17 @@ class OperacionController extends Controller
 
 public function detalles($id)
     { 
-        dd($id);
+        $dato=Operacion::where('id',$id)->get();
+        $dato->each(function($dato){
+            $dato->transporte;
+            $dato->proveedor;
+            $dato->cliente;
+        });
+
+        return view('operaciones.detalles')
+            ->with('dato',$dato)
+            ->with('idoperacion',$id);
+
     }
 
 

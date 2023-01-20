@@ -102,7 +102,7 @@ Route::get('operaciones/{id?}/rendicion', 'OperacionController@rendicion')->name
 Route::get('operaciones/{id?}/anular', 'OperacionController@anular')->name('anular');
 
 
-Route::get('operaciones/{id?}/detalles', 'FleteController@detalles')->name('detalles');
+Route::get('operaciones/{id?}/detalles', 'OperacionController@detalles')->name('detalles');
 Route::post('operaciones/guardaroperacionproveedor', 'OperacionController@guardaroperacionproveedor')->name('guardaroperacionproveedor');
 Route::post('operaciones/guardaroperacioncliente', 'OperacionController@guardaroperacioncliente')->name('guardaroperacioncliente');
 Route::post('operaciones/guardaroperacionflete', 'OperacionController@guardaroperacionflete')->name('guardaroperacionflete');
